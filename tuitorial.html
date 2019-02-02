@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>Learn c progreamming language</title>
+<style type="text/css">
+body{
+margin:0;
+padding:0;
+}
+#header{
+width:16%;
+height:100%;
+background-color:grey;
+float:left;
+}
+#box{
+height:55;
+width:85%;
+padding-left:15;
+font-size:25;
+
+}
+a:hover{
+color:red;
+}
+a:active{
+color:green;
+}
+#container{
+width:100%;
+height:300%;
+}
+#array1{
+height:100%;
+width:81%;
+float:left;
+padding-left:12;
+}
+#text{
+font-size:20;
+
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div id="header">
+<div id="box"><a href="loops.html">Use of loop</a><br></div>
+<div id="box"><a href="c-tuitorial.html">If statements</a><br></div>
+<div id="box"><a href="function-in-c.html">Use of function </a><br></div>
+<div id="box"><a href="data-type-in-c.html">Use of data type in C </a><br></div>
+<div id="box"><a href="c-string.html">Use of data type in C </a><br></div>
+<div id="box"><a href="array.html">Array </a><br></div>
+</div>
+
+<div id="array1">
+<span id="text">
+<h2>Array in C</h2>
+an Array ina data structure that stores a collection of related values that are all of the same types.
+arrays are useful because they can represent relateddata with one descriptive name rether then using
+seperate variable tht each must be namely uniquely.
+<h1>for example</h1>
+        <p> int test_scores[25]; </p>  this tells us about an array of variable test_scores of size 25.
+you can also intialise an array when it is declared,as in the following statements:
+
+
+
+<h3>
+<u>float</u> prices[5]={3.2,6.55,10.49,1.25,0.99};</h3>
+missing values are set to 0.
+<h2>Accessing array elements</h2>
+the contents of an array are called elments with each element accessible by an index number start at <b>0</b>
+<p>Arrays a kind of data structure that can store a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.</p>
+<p>Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare one array variable such as numbers and use numbers[0], numbers[1], and ..., numbers[99] to represent individual variables. A specific element in an array is accessed by an index.</p>
+<p>All arrays consist of contiguous memory locations. The lowest address corresponds to the first element and the highest address to the last element.
+</p>
+<img src="images/array.PNG"</img>
+<h1>Declaring Arrays</h1>
+<p>To declare an array in C, a programmer specifies the type of the elements and the number of elements required by an array as follows −</p>
+<div id="arrayname"><U>Type array name [array Size];</U></div>
+<p>This is called a single-dimensional array. The arraySize must be an integer constant greater than zero and type can be any valid C data type. For example, to declare a 10-element array called balance of type double, use this statement-</p>
+</span>
+<div id="arrayname"><U>double balance[10];</U></div>
+<P>Here balance is a variable array which is sufficient to hold up to 10 double numbers.</P>
+<h1>Initializing Arrays</h1>
+<p>You can initialize an array in C either one by one or using a single statement as follows −</p>
+<div id="arrayname"><U>double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};</U></div>
+<p>The number of values between braces { } cannot be larger than the number of elements that we declare for the array between square brackets [ ].</p>
+<p>If you omit the size of the array, an array just big enough to hold the initialization is created. Therefore, if you write −</p>
+<div id="arrayname"><U>double balance[] = {1000.0, 2.0, 3.4, 7.0, 50.0};</U></div>
+<p>You will create exactly the same array as you did in the previous example. Following is an example to assign a single element of the array −</p>
+<div id="arrayname"><U>balance[4] = 50.0;</U></div>
+<p>The above statement assigns the 5th element in the array with a value of 50.0. All arrays have 0 as the index of their first element which is also called the base index and the last index of an array will be total size of the array minus 1. Shown below is the pictorial representation of the array we discussed above −</p>
+<img src="images/artable.PNG">
+<H1>Accessing Array Elements</H1>
+<p>An element is accessed by indexing the array name. This is done by placing the index of the element within square brackets after the name of the array. For example −</p>
+<div id="arrayname"><U>double salary = balance[9];</U></div>
+<P>The above statement will take the 10th element from the array and assign the value to salary variable. The following example Shows how to use all the three above mentioned concepts viz. declaration, assignment, and accessing arrays −</P>
+<P>.......executer......</P>
+<h1>Arrays in Detail</h1>
+WE WILL COME FOR THIS ONE ALSO SOON.........
+<p><a href="tuitorial.html">Previous page</a></p>
+</div>
+</div>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

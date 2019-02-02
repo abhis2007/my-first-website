@@ -1,0 +1,185 @@
+<html>
+<head>
+<title>Learning class with c language</title>
+<style type="text/css">
+#text{
+font-size:16;
+color:red;
+}
+#intro{
+font-size:17.8;
+}
+#bold{
+font-size:17.8;
+}
+</style>
+</head>
+<body>
+<p id="intro"><h1 align="center">Introduction about C programming language</h1></p>
+<span id="text">C is a procedural programming language. It was initially developed by Dennis Ritchie between 1969 and 1973. It was mainly developed as a system programming language to write operating system. The main features of C language include low-level access to memory, simple set of keywords, and clean style, these features make C language suitable for system programming like operating system or compiler development.
+Many later languages have borrowed syntax/features directly or indirectly from C language. Like syntax of Java, PHP, JavaScript and many other languages is mainly based on C language. C++ is nearly a superset of C language (There are few programs that may compile in C, but not in C++).</span>
+<p id="text"><h2>C Language Introduction</strong></h2>
+<div id="bold">
+Many later languages have borrowed syntax/features directly or indirectly from C language. Like syntax of Java, PHP, JavaScript and many other languages is mainly based on C language. C++ is nearly a superset of C language (There are few programs that may compile in C, but not in C++).
+
+Beginning with C programming:
+
+1) Finding a Compiler:
+Before we start C programming, we need to have a compiler to compile and run our programs.<br>There are certain online compilers like https://ide.geeksforgeeks.org/, http://ideone.com/ or http://codepad.org/ that <br>can be used to start C without installing a compiler.
+
+Windows: There are many compilers available freely for compilation of C programs like Code Blocks  <br>and Dev-CPP.   We strongly recommend Code Blocks.
+ </div>
+ #<h2>Writing first program:</h2>
+<strong>Following is first program in C</strong><br>
+<strong>
+#include <stdio.h><br> 
+int main(void)<br> 
+{<br>
+    printf("LEARNING CLASSES");<br> 
+    return 0;<br> 
+}</strong><br> 
+
+<STRONG>Output:</STRONG><u>LEARNING</u> <u>CLASSES</u><br>
+
+Let us analyze the program line by line.<br>
+<div id="bold">
+<p><STRONG>Line 1:</STRONG> [ #include <stdio.h> ] In a C program, all lines that start with # are processed by preprocessor <br>which is a program invoked by the compiler. In a very basic term, preprocessor takes a C program and <br>produces another C program. The produced program has no lines starting with #, all such lines are </br>processed by the preprocessor. In the above example, preprocessor copies the preprocessed code of </br>stdio.h to our file. The .h files are called header files in C. These header files generally contain </br>declaration of functions. We need stdio.h for the function printf() used in the program.</p><br>
+
+<br><STRONG>Line 2</STRONG> [ int main(void) ] There must to be starting point from where execution of compiled C program </br>begins. In C, the execution typically begins with first line of main(). The void written in brackets indicates </br>that the main doesn’t take </br>any parameter (See this for more details). main() can be written to take parameters also. We will be covering that in future posts.
+The int written before main indicates return type of main(). The value returned by main indicates status </br>of program termination. See this post for more details on return type.
+
+<p><br><STRONG>Line 3 and 6</STRONG>: [ { and } ] In C language, a pair of curly brackets define a scope and mainly used in </br>functions and control statements like if, else, loops. All functions must start and end with curly brackets.</p>
+
+<p><br><STRONG>Line 4</STRONG> [ printf(“GeeksQuiz”); ] printf() is a standard library function to print something on standard </br>output. The semicolon at the end of printf indicates line termination. In C, semicolon is always used to </br>indicate end of statement.</p>
+
+<br><STRONG>Line 5</STRONG> [ return 0; ] The return statement returns the value from main(). The returned value may be used </br>by operating system to know termination status of your program. The value 0 typically means successful </br>termination.
+
+Please write comments if you find anything incorrect, or you want to share more information about the </br>topic discussed above
+</div>
+<h2>Recommended Posts:</h2>
+<strong>
+*C Programming Language Standard<br>
+*Interesting Facts about Macros and Preprocessors in C<br>
+*Difference between “int main()” and “int main(void)” in C/C++?<br>
+*Is it fine to write “void main()” or “main()” in C/C++?<br>
+*Variables and Keywords in C<br>
+*int (1 sign bit + 31 data bits) keyword in C<br>
+*Commonly Asked C Programming Interview Questions | Set 1<br>
+*Difference between pointer and array in C?<br>
+*Functions in C/C++<br>
+*Assertions in C/C++<br>
+*Pointers in C and C++ | Set 1 (Introduction, Arithmetic and Array)<br>
+*Data Types in C<br>
+*How are variables scoped in C – Static or Dynamic?<br>
+*rrays in C/C++<br>
+*C Program to print contents of file<br>
+</strong>
+<div id="bold">
+Every full C program begins inside a function called "main". A function is <br>simply a collection of commands that do "something". The main function is always called when the program first executes. From main, we can call other functions, whether they be written by us or by others or <br>use built-in language features. To access the standard functions that comes with your compiler, you need to include a header with the #include directive. What this does is effectively take everything in the header and paste it into your program. Let's look at a working program:
+</div>
+<strong><br>#include <stdio.h><br>
+int main()<br>
+{<br>
+    printf( "I am alive!  Beware.\n" );<br>
+    getchar();<br>
+    return 0;<br>
+}</strong><br>
+<div id="bold">
+Let's look at the elements of the program. The #include is a "preprocessor" directive that tells the compiler to put code from the header <br>called stdio.h into our program before actually creating the executable. <br>By including header files, you can gain access to many different functions--both the printf <br>and getchar functions are included in stdio.h. 
+
+<p>The next important line is int main(). This line tells the compiler that there <br>is a function named main, and that the function returns an <br>integer, hence int. The "curly braces" ({ and }) signal the beginning and <br>end of functions and other code blocks. If you have <br>programmed in Pascal, you will know them as BEGIN and END. Even if you haven't programmed in Pascal, this is a good way to think about their <br>meaning. </p>
+
+<p>The printf function is the standard C way of displaying output<br> on the screen. The quotes tell the compiler <br>that you want to output the literal string as-is (almost). The '\n' <br>sequence is actually treated as a single character that stands for a newline (we'll talk about this later in more detail); <br>for the time being, just remember that there are a few sequences that, when they appear in a string literal, are actually not displayed <br>literally by printf and that '\n' is one of them. The actual effect of '\n' is to move the cursor on your screen to the next line. Notice the semicolon: it tells <br>the compiler that you're at the end of a command, such as a function call. You will see that the semicolon is used to end many <br>lines in C. </p>
+
+<p>The next command is getchar(). This is another function <br>call: it reads in a single character and waits for the user to <br>hit enter before reading the character. This line <br>is included because many compiler environments will open a new console window, <br>run the program, and then close the window before you <br>can see the output. This command keeps that window from closing because the <br>program is not done yet because it waits for you to hit enter. Including that line gives you <br>time to see the program run. </p>
+
+<p>Finally, at the end of the program, we return a value from main to the operating system by <br>using the return statement. This return value is important as it can be used to tell </br>the operating system whether our program succeeded or not. A return value of 0 means success. </p>
+
+<p>The final brace closes off the function. You should try <br>compiling this program and running it. You can cut and<br> paste the code into a file, save it as a .c <br>file, and then compile it. If you are using a command-line compiler,<br> such as Borland C++ 5.5, you should read the compiler instructions for <br>information on how to compile. Otherwise compiling and running should be as <br>simple as clicking a button with your mouse (perhaps the "build" or "run" button). You might start playing <br>around with the printf function and get used to writing<br> simple C program<br>
+Comments are critical for all but the<br> most trivial programs and this tutorial will often use<br> them to explain sections of code. When you tell the compiler a <br>section of text is a comment, it will ignore it when running t<br>he code, allowing you to use any text you want to describe the rea<br>l code. To create a comment in C, you surround the text wit<br>h /* and then */ to block off everything between as a comment<br>. Certain compiler environments or text editors will change the color of a <br>commented area to make it easier to spot, but some will not. Be certain not to <br>accidentally comment out code (that is, to tell the compiler part of your <br>code is a comment) you need for the program. </p>
+
+<p>When you are learning to program, it is also useful to comment out <br>sections of code in order to see how the output is affected.<br>
+Using Variables</p>
+<p>So far you should be able to write a simple program to display information <br>
+typed in by you, the programmer and to describe your program with comments. That<br>'s great, but what about interacting with your user? Fortunately, it<br> is also possible for your program t<br>o accept input.</p> 
+
+<p>But first, before you try to receive input, you must have a place to store <br>that input. In programming, input and data are stored in variables. There are several <br>different types of variables; when you tell the compiler you are declaring a variable, you must include the data type <br>along with the name of the variable. <br>Several basic types include char, int, and float. Each type can store different types of data. </p>
+
+<p>A variable of type char stores a single character, variables of type int store<br> integers (numbers without decimal places), and variables of type float store numbers <br>with decimal places. Each of these variable types - char, int, and float - is each a keyword that you use when you <br>declare a variable. Some variables also use more of the computer's memory to store their values. </p>
+
+<p>It may seem strange to have multiple variable types when it seems like some <br>variable types are redundant. But using the right variable size can be important for making <br>your program efficient because some variables require more memory than others. For now, suffice it to say that <br>the different variable types will almost all be used! </p>
+
+<p>Before you can use a variable, you must tell the compiler about it by declaring<br> it and telling the compiler about what its "type" is. To declare a variable you use the syntax <br><variable type> <name of variable>;. (The brackets here indicate that your replace the expression with text described within the brackets.) <br>For instance, a basic variable declaration might look like this:</p>
+<br>int myVariable;
+<p>Note once again the use of a semicolon at the end of the line. Even though we're <br>not calling a function, a semicolon is still required at the end of the "expression". This code <br>ould create a variable called myVariable; now we are free to use <br>myVariable later in the program.</p> 
+
+<p>It is permissible to declare multiple variables of the same type on the same line; <br>each one should be separated by a comma. If you attempt to use an undefined variable, your program<br> will not run, and you will receive an error message informing you that <br>you have made a mistake. </p>
+</div>
+<p><strong>Here are some variable declaration examples:</strong></p><strong>
+int x;<br>
+int a, b, c, d;<br>
+char letter;<br>
+float the_float;</strong><br>
+<p><div id="bold">'While you can have multiple variables of the same type, you cannot have multiple variables with the same name. Moreover, you cannot have variables and <br>functions with the same name. </p>
+
+<p>A final restriction on variables is that variable declarations must come before other types of statements in the given "code block" <br>(a code block is just a segment of code surrounded by { and }). So in C you must declare all of your <br>variables before you do anything else:</p> </bold>
+<p><strong>Wrong</strong></p>
+<p><strong>#include <stdio.h><br>
+int main()<br>
+{<br>
+    /* wrong!  The variable declaration must appear first */<br>
+    printf( "Declare x next" );<br>
+    int x;<br>
+
+    return 0;<br>
+}</strong><br>
+Fixed<br>
+<strong>#include <stdio.h><br>
+int main() <br>
+{<br>
+    int x;<br>
+    printf( "Declare x first" );<br>
+
+    return 0;<br>
+}</strong><br>
+<div id="bold">
+<strong>Reading input<br></strong>
+Using variables in C for input or output can be a bit of a hassle at first, but bear with it and it will make sense. We'll be using the scanf function to read in a value and then printf to read it back out. Let's look at the program and then pick apart exactly what's going on. You can even compile this and run it if it helps you follow along.
+<br></div><strong>#include <stdio.h><br>
+
+int main()<br>
+{<br>
+    int this_is_a_number;<br>
+
+    printf( "Please enter a number: " );<br>
+    scanf( "%d", &this_is_a_number );<br>
+    printf( "You entered %d", this_is_a_number );<br>
+    getchar();<br>
+    return 0;<br>
+}</strong><br>
+<div id="bold">
+<p>So what does all of this mean? We've seen the #include and main function before; main must appear in every program you intend to run, and <br>the <strong>#include</strong> gives us access to printf (as well as scanf). <br>(As you might have guessed, the io in stdio.h stands for "input/output"; std just stands for "standard.") The keyword int declares this_is_a_number<br> to be an integer.<br> 
+This is where things start to get interesting: the scanf<br> function works by taking a string and some variables modified with &. The string <br>tells scanf what variables to look for: notice that we have a string containing only "%d" -- this tells the scanf <br>function to read in an integer. The second argument of scanf is the variable, sort of. We'll <br>learn more about what is going on later, but the gist of it is that scanf needs to know where the variable is stored in order to change its value.<br> Using & in front of a variable allows you to get its location and give that to scanf instead of the value of the variable.<br> Think of it like giving someone directions to the soda aisle and letting them go get a coca-cola instead of fetching the coke for that person. The & gives the scanf function<br> directions to the variable. </p>
+
+<p>When the program runs, each call to scanf checks its own input string to see what kinds of input to expect, and then stores the value input into the variable. </p>
+
+<p>The second printf statement also contains the same '%d'--both scanf and printf use the same format for indicating values embedded in strings. <br>In this case, printf takes the first argument after the string, the variable this_is_a_number, and treats it as though it were of<br> the type specified by the "format specifier". In this case, printf treats this_is_a_number as an integer based on the <br>format specifier. </p>
+
+<p>So what does it mean to treat a number as an integer? If the user attempts to type in a decimal number, it will be truncated (that is, the decimal<br> component of the number will be ignored) when stored in the variable. Try typing in a sequence of characters or a decimal number when you run the example program; <br>the response will vary from input to input, but in no case is it particularly pretty. <br>
+
+<p>Of course, no matter what type you use, variables are uninteresting without the ability to modify them. Several operators used with variables include the following:<br><p>*, -, +, /, =,>, <. </p>The <strong>*</strong> multiplies, the <strong>/</strong> divides, the <strong>-</strong> subtracts<strong>,</strong> and the <strong>+</strong> adds. It is of course important to realize that to modify the value of a variable </br>inside the program it is rather important to use the equal sign. In some languages, the equal </br>sign compares the value of the left and right values, but in C == is used for that task. The equal sign is still extremely useful. It sets the value of the variable on </br>the left side of the equals sign equal to the value on the right side of the equals sign. The operators that perform mathematical functions should be used </br>on the right side of an equal sign in order to assign the result to a variable on the left side.</P> 
+</div>
+<p><h1>Here are a few examples:</h1></p>
+<strong>a = 4 * 6; /* (Note use of comments and of semicolon) a is 24 */</br>
+a = a + 5; /* a equals the original value of a with five added to it */</br>
+a == 5     /* Does NOT assign five to a. Rather, it checks to see if a equals 5.*/ </br>
+The other form of equal, ==, is not a way to assign a value to a variable. Rather, it checks to see if the variables are equal. </br>It is extremely useful in many areas of C; for example, you will often use == in such constructions as conditional statements and loops. You can probably guess how < and > function. </br>They are greater than and less than operators. </p>
+</strong>
+<p><h2>For example:</h2></p>
+<strong>a < 5  /* Checks to see if a is less than five */</br>
+a > 5  /* Checks to see if a is greater than five */</br> 
+a == 5 /* Checks to see if a equals five, for good measure */</br> 
+</strong>
+</div>
+</body>
+</html>

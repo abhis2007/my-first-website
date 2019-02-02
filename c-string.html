@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<title>c-string</title>
+<style type="text/css">
+#text{
+font-size:18;
+}
+</style>
+</head>
+<body>
+<div id="text">
+<h1 align="center">C STRING</H1>
+C Strings are nothing but array of characters ended with null <br>
+character (‘\0’).<br>
+This null character indicates the end of the string.<br>
+Strings are always enclosed by double quotes. Whereas, character<br> is enclosed by single quotes in C.<br>
+<h1>EXAMPLE FOR C STRING:</h1><br>
+<strong>char string[20]</strong> = {‘f’, ’r’, ‘e’, ‘s’, ‘h’, ‘2’, ‘r’, ‘e’, ‘f’, ’r’, ‘e’, ‘s’, ‘h’, ‘\0’};<br>
+(or)<br>
+<strong>char string[20] </strong>= “fresh2refresh”;<br>
+(or)<br>
+<strong>char string [] </strong>   = “fresh2refresh”;<br>
+Difference between above declarations are, when we declare char <br>as “string[20]”, 20 bytes of memory space is allocated for holding<br> the string value.<br>
+When we declare char as “string[]”, memory space will be allocated<br> as per the requirement during execution of the program.<br></strong>
+<h1>EXAMPLE PROGRAM FOR C STRING:</h1>
+C<br>
+<strong>
+#include <stdio.h><br>
+
+int main ()<br>
+{<br>
+   char string[20] = "fresh2refresh.com";<br>
+
+   printf("The string is : %s \n", string );<br>
+   return 0;<br>
+}</strong><br>
+1<br>
+2<br>
+3<br>
+4<br>
+5<br>
+6<br>
+7<br>
+8<br>
+9<br>
+#include <stdio.h><br>
+ 
+int main ()<br>
+{<br>
+   char string[20] = "fresh2refresh.com";<br>
+ 
+   printf("The string is : %s \n", string );<br>
+   return 0;<br>
+}<br>
+OUTPUT:
+The string is : fresh2refresh.com<br>
+<strong>C STRING FUNCTIONS:</strong>
+String.h header file supports all the string functions in C language. <br>All the string functions are given below.<br>
+Click on each string function name below for detail description <br>and example programs.<br>
+String functions<br>
+Description<br>
+<strong>strcat( )</strong>Concatenates str2 at the end of str1<br>
+<strong>strncat</strong>( )	Appends a portion of string to another<br>
+<strong>strcpy</strong> ( )	Copies str2 into str1<br>
+<strong>strncpy</strong> ( )	Copies given number of characters of one string to another<br>
+<strong>strlen </strong>( )	Gives the length of str1<br>
+<strong>strcmp </strong>( )	Returns 0 if str1 is same as str2. Returns <0 if strl < str2. Returns >0 if str1 > str2<br>
+<strong>strcmpi</strong> ( )	Same as strcmp() function. But, this function negotiates case.  “A” and “a” are treated as same.<br>
+<strong>strchr </strong>( )	Returns pointer to first occurrence of char in str1<br>
+<strong>strrchr </strong>( )	last occurrence of given character in a string is found<br>
+<strong>strstr</strong> ( )	Returns pointer to first occurrence of str2 in str1<br>
+<strong>strrstr </strong>( )	Returns pointer to last occurrence of str2 in str1<br>
+<strong>strdup </strong>( )	Duplicates the string<br>
+<strong>strlwr </strong>( )	Converts string to lowercase<br>
+<strong>strupr </strong>( )	Converts string to uppercase<br>
+<strong>strrev </strong>( )	Reverses the given string<br>
+<strong>strset</strong> ( )	Sets all character in a string to given character<br>
+<strong>trnset </strong>( )	It sets the portion of characters in a string to given character<br>
+<strong>strtok </strong>( )	Tokenizing given string using delimiter<br>
+</div>
+</body>
+</html>

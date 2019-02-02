@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>loops</title>
+<style type="text/css">
+</style>
+</head>
+<body>
+Loops
+
+ <p>Loops are used to repeat a block of code. Being able to have your program repeatedly execute a block of code is one of the most basic but useful tasks in programming -- many programs or websites that produce extremely complex output (such as a message board) are really only executing a single task many times. (They may be executing a small number of tasks, <br>but in principle, to produce a list of messages only requires repeating the operation of reading in some data and displaying it.) Now, think about what this means: a loop lets you write a very simple statement to produce a significantly greater result simply by repetition.<br></p>
+
+
+
+
+<p>One caveat: before going further, you should understand the concept of C's true and false, because it will be necessary<br> when working with loops (the conditions are the same as with if statements). This concept is covered in the previous tutorial. There are three types of loops: for, while, and do..while. Each of them has their specific uses. They are all outlined below. <br>
+
+<p>FOR - for loops are the most useful type. The syntax for a for loop is <br>
+<br><strong>
+for ( variable initialization; condition; variable update ) {<br>
+  Code to execute while the condition is true<br>
+}<br>
+The variable initialization allows you to either declare a variable and give it a value or give a value to an already existing variable. Second, the condition <br>tells the program that while the conditional expression is true the loop should continue to repeat itself. The variable update section is the easiest way for a for loop to handle changing of the variable. It is possible to do <br>things like<strong> x++, x = x + 10, or even x = random ( 5 ), </strong>and if you really wanted to, you could call other functions that do nothing to the variable but still have a useful effect on the code. Notice that a semicolon separates each of these sections, that is important. Also note that every single one of the sections may be empty, though the <br>semicolons still have to be there. If the condition is empty, it is evaluated as true and the loop will repeat until something else <br>stops it. 
+<p><strong>
+<h1>Example:</h1><br>
+#include <stdio.h><br>
+
+int main()<br>
+{<br>
+    int x;<br>
+    /* The loop goes while x < 10, and x increases by one every loop*/<br>
+    for ( x = 0; x < 10; x++ ) {<br>
+        /* Keep in mind that the loop condition checks<br> 
+           the conditional statement before it loops again.<br>
+           consequently, when x equals 10 the loop breaks.<br>
+           x is updated before the condition is checked. */   <br>
+        printf( "%d\n", x );<br>
+    }<br>
+    getchar();<br></strong>
+}<br>
+This program is a very simple example of a for loop. x is set to zero, while x is less than 10 it calls printf <br>to display the value of the variable x, and it adds 1 to x until the condition is met. Keep in <br>mind also that the variable is incremented after the code in the loop is run for the first<br> time. 
+<br>
+<h4>WHILE -</strong> WHILE loops are very simple. The basic structure is </h4>
+<strong>
+while ( condition ) { Code to execute while the condition is true } The true represents a boolean expression <br>which could be <strong>x == 1 or while ( x != 7 ) (x does not equal 7). </strong>It can be any combination of boolean statements that are legal. Even, (while x ==5 || v == 7) which says execute the code while x equals five or while v equals 7. Notice that a while loop is like a stripped-down version of a for loop-- it has no initialization or update section. However,<br> an empty condition is not legal for a while loop as it is with a for loop. <br>
+
+<h2>Example:</h2><br>
+#include <stdio.h><br>
+
+int main()<br>
+{ <br>
+  int x = 0;  /* Don't forget to declare variables */<br>
+  
+  while ( x < 10 ) { /* While x is less than 10 */<br>
+      printf( "%d\n", x );<br>
+      x++;             /* Update x so the condition can be met eventually */<br>
+  }<br>
+  getchar();<br>
+}<br>
+This was another simple example, but it is longer than the above FOR loop. The easiest way to think of the loop is that when it reaches the brace at the end it jumps back up to the beginning of the loop, which checks the condition again and decides whether to repeat the block another time, or stop and move to the next statement after the block. <br>
+
+DO..WHILE - DO..WHILE loops are useful for things that want to loop at least once. The structure is<br>
+do {<br>
+} while ( condition );<br>
+Notice that the condition is tested at the end of the block instead <br>of the beginning, so the block will be executed at least once. If the condition is true, we jump back to the beginning of the block and execute it again. A do..while loop is almost the same as a while loop except that the loop body is guaranteed to execute at least once. A while loop says "Loop while<br> the condition is true, and execute this block of code", a do..while loop says "Execute this block of code, and then continue to loop while the condition is true". <br>
+<strong>
+<h2>Example:</h2><br>
+#include <stdio.h><br>
+
+int main()<br>
+{<br>
+  int x;<br>
+
+  x = 0;<br>
+  do {<br>
+    /* "Hello, world!" is printed at least one time<br>
+      even though the condition is false */<br>
+      printf( "Hello, world!\n" );<br>
+
+ } while ( x != 0 );<br>
+  getchar();<br>
+}</strong><br>
+Keep in mind that you must include a trailing semi-colon after the while in the above example. A common error is to forget that a do..while loop must be terminated with a semicolon<br> (the other loops should not be terminated with a semicolon, adding to the confusion). Notice that this loop will execute once, because it automatically executes before checking the condition.<br>
+<h1>Break and Continue</h1><br>
+
+Two keywords that are very important to looping are break and continue. The break command will exit the most immediately surrounding loop regardless<br> of what the conditions of the loop are. Break is useful if we want to exit a loop under special circumstances. For example, let's say the program we're working on is <br>a two-person checkers game. The basic structure of the program might look like this:<br>
+while (true) <br>
+{<br>
+    take_turn(player1);<br>
+    take_turn(player2);<br>
+}<br>
+This will make the game alternate between having player 1 and player 2 take turns. The only problem with this <br>logic is that there's no way to exit the game; the loop will run forever! Let's try something like this instead:<br>
+while(true)<br>
+{<br>
+    if (someone_has_won() || someone_wants_to_quit() == TRUE)<br>
+    {break;}<br>
+    take_turn(player1);<br>
+    if (someone_has_won() || someone_wants_to_quit() == TRUE)<br>
+    {break;}<br>
+    take_turn(player2);<br>
+}<br>
+This code accomplishes what we want--the primary loop of the game will continue under normal circumstances, but under a special condition (winning or exiting) the flow will stop and our program will do something else.<br>
+Continue is another keyword that controls the flow of loops. If you are executing a loop and hit a continue statement, the loop will stop its current iteration, update itself (in the case of for loops) and begin to <br>execute again from the top. Essentially, the continue statement is saying "this iteration of the loop is done, let's continue with the loop without executing whatever code comes after me." Let's say we're implementing a game of Monopoly. Like above, we want to use a loop to control whose turn <br>it is, but controlling turns is a bit more complicated in Monopoly than in checkers. The basic structure of our code might then look something like this:<br>
+for (player = 1; someone_has_won == FALSE; player++)<br>
+    {<br>
+        if (player > total_number_of_players)<br>
+        {player = 1;}
+        if (is_bankrupt(player))<br>
+        {continue;}<br>
+        take_turn(player);<br>
+    }<br>
+	</body>
+	</html>
